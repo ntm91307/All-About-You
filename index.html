@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About You - Events & Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdfdfd;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .address {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #b22222;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f8f8;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #b22222;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #a11d1d;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            padding: 8px;
+            font-size: 1em;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
+
+            .gallery-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="All About You Logo" />
+        <div class="address">2550 E. Desert Inn Rd. #165, Las Vegas, NV 89121</div>
+    </header>
+
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>June 10, 2025</td>
+                    <td>Summer Kickoff at Sunset Park</td>
+                    <td>Sunset Park, Las Vegas</td>
+                </tr>
+                <tr>
+                    <td>June 22, 2025</td>
+                    <td>Fudge Pop Sampling - Farmers Market</td>
+                    <td>Downtown 3rd Farmers Market</td>
+                </tr>
+                <tr>
+                    <td>July 4, 2025</td>
+                    <td>Independence Day Celebration Booth</td>
+                    <td>Fremont Street Experience</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <a href="#gallery" class="btn">View/Upload to Gallery</a>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Upload or view photos from our community events!</p>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/180x120?text=Photo+1" alt="Gallery Photo 1">
+                <img src="https://via.placeholder.com/180x120?text=Photo+2" alt="Gallery Photo 2">
+                <img src="https://via.placeholder.com/180x120?text=Photo+3" alt="Gallery Photo 3">
+            </div>
+            <form style="margin-top: 20px;">
+                <label for="photoUpload">Upload a Photo</label>
+                <input type="file" id="photoUpload" name="photoUpload" accept="image/*">
+                <button class="btn" type="submit">Upload</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 All About You. All rights reserved.</p>
+    </footer>
+</body>
+</html>
